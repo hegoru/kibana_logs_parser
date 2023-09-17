@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logs beautifier</title>
+    <link rel="icon" href="./favicons/favicon-128.png" type="image/png" />
+    <link rel="stylesheet" href="./styles/global.css" />
+    <script type="module" src="./scripts/index.js" defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <nav class="page-nav">
+          <div>
+            <h1 class="page-heading">Logs beautifier v0.1</h1>
+          </div>
+          <div class="popup-container"></div>
+        </nav>
+      </div>
+    </header>
+
+    <main role="main">
+      <div class="container">
+        <article class="action-info">
+          <h2 class="action-info__heading">
+            <span class="unselectable">Action:</span> <span class="action__name"></span>
+          </h2>
+        </article>
+
+        <div class="filters">
+          <fieldset class="filters__fieldset">
+            <legend>Logs fields</legend>
+
+            <div class="switch">
+              <div class="switch__container">
+                <label for="switch" class="unselectable">Popular filters</label>
+                <input
+                  type="checkbox"
+                  id="switch"
+                  class="switch__element"
+                  disabled
+                />
+                <label for="switch" class="switch__label switch--disabled"></label>
+              </div>
+            </div>
+
+            <div class="fieldset__container"></div>
+          </fieldset>
+        </div>
+
+        <div class="container--splitted">
+          <div class="raw-logs-form">
+            <form class="raw-logs-form__body form__body">
+              <div class="form__element">
+                <label for="raw-logs">Raw logs</label>
+                <textarea
+                  class="form__textarea"
+                  name="raw-logs"
+                  id="raw-logs"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+
+              <div class="form__element">
+                <input
+                  class="parse-btn btn btn--accent btn--active"
+                  type="submit"
+                  value="Parse"
+                />
+              </div>
+            </form>
+          </div>
+
+          <div class="parsed-logs-form">
+            <form class="parsed-logs-form__body form__body">
+              <div class="form__element">
+                <label for="parsed-logs">Parsed logs</label>
+                <textarea
+                  class="form__textarea"
+                  name="parsed-logs"
+                  id="parsed-logs"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+
+              <div class="form__element">
+                <input
+                  class="btn btn--accent btn--active"
+                  type="submit"
+                  value="Copy to clipboard"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
